@@ -46,7 +46,7 @@ def train_ppo_agent():
     
     # Train the model
     model.learn(
-        total_timesteps=50000,  # Adjust based on your needs
+        total_timesteps=1000000,  # Adjust based on your needs
         callback=eval_callback,
         progress_bar=True
     )
