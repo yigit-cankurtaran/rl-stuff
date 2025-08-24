@@ -7,16 +7,16 @@ import os
 import numpy as np
 
 def train_ppo_agent():
-    """Train PPO agent on Reacher-v4"""
-    print("Training PPO agent on Reacher-v4...")
+    """Train PPO agent on Reacher-v5"""
+    print("Training PPO agent on Reacher-v5...")
     
     # Create directories
     os.makedirs("models", exist_ok=True)
     os.makedirs("logs", exist_ok=True)
     
     # Create environment
-    env = make_vec_env('Reacher-v4', n_envs=4, seed=0)
-    eval_env = Monitor(gym.make('Reacher-v4'))
+    env = make_vec_env('Reacher-v5', n_envs=4, seed=0)
+    eval_env = Monitor(gym.make('Reacher-v5'))
     
     # Create callback for evaluation
     eval_callback = EvalCallback(
@@ -58,16 +58,16 @@ def train_ppo_agent():
     return model
 
 def train_sac_agent():
-    """Train SAC agent on Reacher-v4"""
-    print("Training SAC agent on Reacher-v4...")
+    """Train SAC agent on Reacher-v5"""
+    print("Training SAC agent on Reacher-v5...")
     
     # Create directories
     os.makedirs("models", exist_ok=True)
     os.makedirs("logs", exist_ok=True)
     
     # Create environment
-    env = gym.make('Reacher-v4')
-    eval_env = Monitor(gym.make('Reacher-v4'))
+    env = gym.make('Reacher-v5')
+    eval_env = Monitor(gym.make('Reacher-v5'))
     
     # Create callback for evaluation
     eval_callback = EvalCallback(
