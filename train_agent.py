@@ -110,7 +110,7 @@ def train_sac_agent():
 
 if __name__ == "__main__":
     # Train PPO (comment out if you prefer SAC)
-    ppo_model = train_ppo_agent()
+    # ppo_model = train_ppo_agent()
     
     # Train SAC (uncomment if you want to try SAC instead)
-    # sac_model = train_sac_agent()
+    sac_model = train_sac_agent()
